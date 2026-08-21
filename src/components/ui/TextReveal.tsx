@@ -57,14 +57,25 @@ export default function TextReveal({
           key={`${p}-${i}`}
           aria-hidden="true"
           className="inline-block overflow-hidden align-bottom"
-          style={{ paddingBottom: "0.08em" }}
+          /*
+           * A moldura é esticada com padding e encolhida de volta com margem
+           * negativa: a caixa de recorte cresce sem mexer no layout. Sem a folga
+           * no topo, o `overflow-hidden` decepa os acentos das maiúsculas —
+           * "HISTÓRIA" virava "HISTORIA".
+           */
+          style={{
+            paddingTop: "0.2em",
+            paddingBottom: "0.16em",
+            marginTop: "-0.2em",
+            marginBottom: "-0.16em",
+          }}
           initial="oculto"
           whileInView="visivel"
           viewport={{ once: true, amount: 0.4 }}
         >
           <motion.span
             className="inline-block"
-            variants={{ oculto: { y: "110%" }, visivel: { y: "0%" } }}
+            variants={{ oculto: { y: "135%" }, visivel: { y: "0%" } }}
             transition={{ duration: 0.85, ease: EASE, delay: delay + i * step }}
           >
             {p}

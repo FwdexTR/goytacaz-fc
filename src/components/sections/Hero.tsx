@@ -102,11 +102,12 @@ export default function Hero() {
                   <span
                     key={linha}
                     aria-hidden="true"
-                    className="block overflow-hidden pb-[0.06em]"
+                    // Folga no topo para não decepar acentos das maiúsculas.
+                    className="block overflow-hidden pb-[0.16em] pt-[0.2em] -mt-[0.2em] -mb-[0.16em]"
                   >
                     <motion.span
                       className="block"
-                      initial={{ y: "110%" }}
+                      initial={{ y: "135%" }}
                       animate={{ y: "0%" }}
                       transition={{ duration: 1.1, ease: EASE, delay: 0.35 + i * 0.12 }}
                     >
