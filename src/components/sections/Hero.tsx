@@ -28,12 +28,21 @@ export default function Hero() {
   const escala = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
   const opacidade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
-  /** Props de entrada — inertes quando o movimento está desligado. */
+  /**
+   * Entrada por viewport, não por montagem.
+   *
+   * O hero é remontado assim que a preferência de movimento é resolvida, e a
+   * animação de montagem se perde nesse ciclo — os elementos ficam parados no
+   * estado inicial, invisíveis. O gatilho de viewport dispara depois, quando o
+   * elemento já existe de verdade, e o hero está sempre em tela no carregamento,
+   * então o efeito é o mesmo: começa sozinho, na hora.
+   */
   const entra = (delay: number, y = 12) =>
     ok
       ? {
           initial: { opacity: 0, y },
-          animate: { opacity: 1, y: 0 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, amount: 0 },
           transition: { duration: 0.9, ease: EASE, delay },
         }
       : {};
@@ -81,7 +90,8 @@ export default function Hero() {
 
           <motion.div
             initial={ok ? { opacity: 0, scale: 0.8, rotate: -8 } : undefined}
-            animate={ok ? { opacity: 1, scale: 1, rotate: 0 } : undefined}
+            whileInView={ok ? { opacity: 1, scale: 1, rotate: 0 } : undefined}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 1.2, ease: EASE, delay: 0.35 }}
           >
             <Crest size={64} decorativo />
@@ -99,21 +109,23 @@ export default function Hero() {
             {ok ? (
               <>
                 {LINHAS.map((linha, i) => (
-                  <span
+                  <motion.span
                     key={linha}
                     aria-hidden="true"
                     // Folga no topo para não decepar acentos das maiúsculas.
                     className="block overflow-hidden pb-[0.16em] pt-[0.2em] -mt-[0.2em] -mb-[0.16em]"
+                    initial="oculto"
+                    whileInView="visivel"
+                    viewport={{ once: true, amount: 0 }}
                   >
                     <motion.span
                       className="block"
-                      initial={{ y: "135%" }}
-                      animate={{ y: "0%" }}
+                      variants={{ oculto: { y: "135%" }, visivel: { y: "0%" } }}
                       transition={{ duration: 1.1, ease: EASE, delay: 0.35 + i * 0.12 }}
                     >
                       {linha}
                     </motion.span>
-                  </span>
+                  </motion.span>
                 ))}
               </>
             ) : (
@@ -138,7 +150,8 @@ export default function Hero() {
         <motion.div
           className="mx-auto w-full max-w-[110rem] px-5 pb-8 md:px-10 md:pb-12"
           initial={ok ? { opacity: 0 } : undefined}
-          animate={ok ? { opacity: 1 } : undefined}
+          whileInView={ok ? { opacity: 1 } : undefined}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 1, ease: EASE, delay: 0.95 }}
         >
           <div className="flex flex-wrap items-end justify-between gap-6 border-t border-white/15 pt-6">
