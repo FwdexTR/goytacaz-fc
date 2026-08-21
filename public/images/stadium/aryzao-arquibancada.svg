@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400" role="img">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#061a45"/><stop offset="0.55" stop-color="#0f3480"/><stop offset="1" stop-color="#061a45"/>
+</linearGradient>
+<radialGradient id="glow" cx="53%" cy="63%" r="70%">
+<stop offset="0" stop-color="#4a7ce6" stop-opacity="0.42"/><stop offset="1" stop-color="#4a7ce6" stop-opacity="0"/>
+</radialGradient>
+<pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+<circle cx="2.2" cy="2.2" r="1.5" fill="#4a7ce6" opacity="0.5"/>
+</pattern>
+<linearGradient id="dotsMask" x1="0" y1="1" x2="1" y2="0">
+<stop offset="0" stop-color="#fff" stop-opacity="0.85"/><stop offset="0.7" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<mask id="mDots"><rect width="1400" height="1400" fill="url(#dotsMask)"/></mask>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+<rect width="4" height="1" fill="#000" opacity="0.16"/>
+</pattern>
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+<linearGradient id="vig" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#061a45" stop-opacity="0.55"/><stop offset="0.45" stop-color="#061a45" stop-opacity="0"/><stop offset="1" stop-color="#061a45" stop-opacity="0.8"/>
+</linearGradient>
+</defs>
+<rect width="1400" height="1400" fill="url(#bg)"/>
+<rect width="1400" height="1400" fill="url(#glow)"/>
+<rect x="4" y="-1400" width="43" height="4200" fill="#4a7ce6" opacity="0.101" transform="rotate(18 700 700)"/><rect x="192" y="-1400" width="53" height="4200" fill="#4a7ce6" opacity="0.073" transform="rotate(18 700 700)"/><rect x="742" y="-1400" width="110" height="4200" fill="#4a7ce6" opacity="0.047" transform="rotate(18 700 700)"/><rect x="1262" y="-1400" width="175" height="4200" fill="#4a7ce6" opacity="0.041" transform="rotate(18 700 700)"/>
+<circle cx="1" cy="1251" r="686" fill="none" stroke="#4a7ce6" stroke-width="1.5" opacity="0.106"/><circle cx="272" cy="1385" r="401" fill="none" stroke="#4a7ce6" stroke-width="1.5" opacity="0.148"/><circle cx="848" cy="1031" r="379" fill="none" stroke="#4a7ce6" stroke-width="1.5" opacity="0.177"/>
+<rect width="1400" height="1400" fill="url(#dots)" mask="url(#mDots)" opacity="0.5"/>
+<rect width="1400" height="1400" fill="url(#scan)"/>
+
+<rect width="1400" height="1400" fill="url(#vig)"/>
+<rect width="1400" height="1400" filter="url(#grain)" opacity="0.22" style="mix-blend-mode:overlay"/>
+<rect x="24" y="24" width="1352" height="1352" fill="none" stroke="#f7f8fa" stroke-opacity="0.14"/>
+<text x="48" y="1354" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#f7f8fa" opacity="0.5" letter-spacing="5">ARQUIBANCADA</text>
+</svg>

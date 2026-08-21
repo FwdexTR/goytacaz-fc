@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#061a45"/><stop offset="0.55" stop-color="#0f3480"/><stop offset="1" stop-color="#061a45"/>
+</linearGradient>
+<radialGradient id="glow" cx="99%" cy="63%" r="70%">
+<stop offset="0" stop-color="#4a7ce6" stop-opacity="0.42"/><stop offset="1" stop-color="#4a7ce6" stop-opacity="0"/>
+</radialGradient>
+<pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+<circle cx="2.2" cy="2.2" r="1.5" fill="#4a7ce6" opacity="0.5"/>
+</pattern>
+<linearGradient id="dotsMask" x1="0" y1="1" x2="1" y2="0">
+<stop offset="0" stop-color="#fff" stop-opacity="0.85"/><stop offset="0.7" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<mask id="mDots"><rect width="1600" height="1000" fill="url(#dotsMask)"/></mask>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+<rect width="4" height="1" fill="#000" opacity="0.16"/>
+</pattern>
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+<linearGradient id="vig" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#061a45" stop-opacity="0.55"/><stop offset="0.45" stop-color="#061a45" stop-opacity="0"/><stop offset="1" stop-color="#061a45" stop-opacity="0.8"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<rect width="1600" height="1000" fill="url(#glow)"/>
+<rect x="483" y="-1000" width="76" height="3000" fill="#4a7ce6" opacity="0.060" transform="rotate(18 800 500)"/><rect x="1158" y="-1000" width="142" height="3000" fill="#4a7ce6" opacity="0.041" transform="rotate(18 800 500)"/><rect x="1578" y="-1000" width="193" height="3000" fill="#4a7ce6" opacity="0.047" transform="rotate(18 800 500)"/><rect x="1443" y="-1000" width="192" height="3000" fill="#4a7ce6" opacity="0.072" transform="rotate(18 800 500)"/>
+<circle cx="598" cy="910" r="402" fill="none" stroke="#4a7ce6" stroke-width="1.5" opacity="0.165"/><circle cx="1263" cy="544" r="538" fill="none" stroke="#4a7ce6" stroke-width="1.5" opacity="0.180"/><circle cx="1597" cy="147" r="917" fill="none" stroke="#4a7ce6" stroke-width="1.5" opacity="0.159"/>
+<rect width="1600" height="1000" fill="url(#dots)" mask="url(#mDots)" opacity="0.5"/>
+<rect width="1600" height="1000" fill="url(#scan)"/>
+<text x="1552" y="956" text-anchor="end" font-family="Impact, 'Arial Black', sans-serif" font-size="340" fill="#4a7ce6" opacity="0.14" letter-spacing="-6">1977</text>
+<rect width="1600" height="1000" fill="url(#vig)"/>
+<rect width="1600" height="1000" filter="url(#grain)" opacity="0.22" style="mix-blend-mode:overlay"/>
+<rect x="24" y="24" width="1552" height="952" fill="none" stroke="#f7f8fa" stroke-opacity="0.14"/>
+<text x="48" y="954" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#f7f8fa" opacity="0.5" letter-spacing="5">BRASILEIRÃO</text>
+</svg>

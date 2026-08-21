@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================================
+   GOYTACAZ FUTEBOL CLUBE — SISTEMA VISUAL
+   Azul e branco. Editorial. Histórico. Cinematográfico.
+   ============================================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --- Cor --- */
+  --color-anil-950: #04102e;
+  --color-anil-900: #061a45;
+  --color-anil-800: #0a265f;
+  --color-anil-700: #0f3480;
+  --color-anil-600: #1745a6;
+  --color-anil-500: #245bd0;
+  --color-anil-400: #4a7ce6;
+  --color-anil-300: #86a8f0;
+
+  --color-papel: #efe9de;
+  --color-papel-2: #e2dacb;
+  --color-branco: #f7f8fa;
+  --color-carvao: #0a0c11;
+  --color-fumaca: #9aa3b2;
+
+  /* --- Tipografia --- */
+  --font-display: var(--font-anton);
+  --font-serif: var(--font-instrument);
+  --font-sans: var(--font-inter);
+
+  /* --- Ritmo --- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --bg: var(--color-anil-950);
+  --fg: var(--color-branco);
+  --header-h: 4.5rem;
+  color-scheme: dark;
+}
+
+* { min-width: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* --- Tipografia utilitária --- */
+.font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+.font-editorial {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-weight: 400;
+}
+
+.t-mono {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Escalas fluidas */
+.t-monumental { font-size: clamp(4rem, 17vw, 17rem); }
+.t-hero       { font-size: clamp(3rem, 11.5vw, 11rem); }
+.t-xl         { font-size: clamp(2.25rem, 6.5vw, 6rem); }
+.t-lg         { font-size: clamp(1.75rem, 4.2vw, 3.5rem); }
+.t-md         { font-size: clamp(1.35rem, 2.6vw, 2.1rem); }
+
+.lede {
+  font-size: clamp(1.05rem, 1.55vw, 1.375rem);
+  line-height: 1.55;
+  color: color-mix(in oklab, var(--color-branco) 82%, transparent);
+}
+
+.prosa p {
+  font-size: clamp(1rem, 1.15vw, 1.0625rem);
+  line-height: 1.75;
+  color: color-mix(in oklab, var(--color-branco) 72%, transparent);
+}
+.prosa p + p { margin-top: 1.15em; }
+
+/* --- Textura de grão (arquivo / película) --- */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+}
+
+/* --- Regras / molduras --- */
+.hairline { border-color: color-mix(in oklab, var(--color-branco) 14%, transparent); }
+
+/* --- Reveal base (sem JS já legível) --- */
+[data-reveal] { will-change: transform, opacity; }
+
+/* --- Máscara de revelação de imagem --- */
+.mask-reveal { clip-path: inset(0 0 100% 0); }
+
+/* --- Foco acessível --- */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-anil-300);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection { background: var(--color-anil-500); color: #fff; }
+
+/* --- Scrollbar discreta --- */
+@media (pointer: fine) {
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: var(--color-anil-950); }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--color-anil-500) 60%, transparent);
+    border: 3px solid var(--color-anil-950);
+    border-radius: 99px;
+  }
+}
+
+/* --- Movimento reduzido --- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .grain::after { opacity: 0.28; }
 }
