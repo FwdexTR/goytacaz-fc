@@ -202,3 +202,41 @@ export type ChaveFoto = keyof typeof fotos;
 
 /** Lista para a página de créditos. */
 export const creditos: Foto[] = Object.values(fotos);
+
+/**
+ * Acervo enviado pelo torcedor/clube, fora do Wikimedia Commons.
+ *
+ * ATENÇÃO: a autoria destas fotografias ainda não foi confirmada, e parte delas
+ * chegou como captura de tela do Instagram. Elas estão publicadas com o crédito
+ * pendente declarado na interface. Antes de tratar o site como definitivo, é
+ * preciso levantar quem fotografou cada uma e registrar aqui.
+ */
+export const acervoEnviado = {
+  camisaRetro: {
+    src: "/images/acervo/camisa-retro.webp",
+    alt:
+      "Camisa retrô azul e branca do Goytacaz com cordão na gola, ao lado de uma bola de couro antiga e de uma etiqueta escrita Goytacaz desde 1912",
+    razao: 1.081,
+    autor: "Autoria a confirmar",
+    licenca: "Acervo enviado",
+    fonte: "",
+  },
+  torcidaArquivo: {
+    src: "/images/acervo/torcida-arquivo.webp",
+    alt:
+      "Torcedores do Goytacaz reunidos diante de um ônibus, com surdo e camisas do clube, em fotografia antiga",
+    razao: 1.004,
+    autor: "Autoria a confirmar",
+    licenca: "Acervo enviado",
+    fonte: "",
+  },
+  jogadorAplaude: {
+    src: "/images/acervo/jogador-aplaude.webp",
+    alt:
+      "Jogador do Goytacaz, de costas e com a camisa no ombro, aplaude a arquibancada lotada",
+    razao: 0.891,
+    autor: "Autoria a confirmar",
+    licenca: "Acervo enviado",
+    fonte: "",
+  },
+} as const satisfies Record<string, Foto>;

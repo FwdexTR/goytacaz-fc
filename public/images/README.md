@@ -58,7 +58,26 @@ fachada de hoje aparece no capítulo de 1938 com a legenda "A fachada na Rua dos
 Goytacazes, **hoje**" — e o recorde de público de 1978 continua ilustrado por
 composição gráfica, porque não existe foto livre daquele jogo.
 
-## 2. Composições gráficas — os arquivos `.svg`
+## 2. Acervo enviado — `/acervo`
+
+Doze fotografias entregues fora do Commons (via documento .docx): torcida com
+surdo em foto antiga, arquibancada com fumaça azul, jogadores agradecendo à
+torcida, camisa retrô.
+
+⚠️ **A autoria destas fotos não está confirmada.** Cinco delas chegaram como
+captura de tela do Instagram — a moldura da interface foi recortada na
+importação (`scripts/import-acervo.mjs`), mas recortar não resolve licença.
+Elas estão publicadas com o crédito declarado como pendente na galeria.
+
+Antes de tratar o site como definitivo: levantar quem fotografou cada uma,
+registrar em `src/data/photos.ts` e substituir o texto "Acervo enviado —
+autoria a confirmar" em `src/data/gallery.ts`.
+
+Limitação técnica: o Word recomprimiu as imagens na inserção, então nenhuma
+passa de ~600 px de largura. Servem bem como cartão de galeria e bloco médio,
+mas não como imagem de tela cheia. Os originais, se existirem, valem a pena.
+
+## 3. Composições gráficas — os arquivos `.svg`
 
 Chapas duotônicas geradas para este projeto (`scripts/`), cobrindo as décadas sem
 registro fotográfico de licença livre. São claramente identificadas como
@@ -76,7 +95,7 @@ composições na galeria.
 Mantenha cada arquivo abaixo de ~600 KB. Para originais de alta resolução,
 publique aqui a versão otimizada e guarde o original fora do repositório.
 
-## 3. Escudo — `/brand/escudo.webp`
+## 4. Escudo — `/brand/escudo.webp`
 
 Escudo **oficial** do Goytacaz Futebol Clube, em domínio público, obtido no
 Wikimedia Commons (`File:Goytacaz_Futebol_Clube.png`). Gera também o favicon

@@ -39,9 +39,15 @@ export default function GaleriaPage() {
           <div className="mt-8 grid gap-x-16 gap-y-10 md:grid-cols-12">
             <div className="prosa md:col-span-5">
               <p>
-                As fotografias deste site vêm do Wikimedia Commons, em domínio
-                público ou sob licença Creative Commons. A atribuição abaixo é
-                condição de uso das licenças CC BY-SA — mantenha-a visível.
+                Parte das fotografias vem do Wikimedia Commons, em domínio público
+                ou sob licença Creative Commons. A atribuição abaixo é condição de
+                uso das licenças CC BY-SA — mantenha-a visível.
+              </p>
+              <p>
+                As imagens marcadas como <strong>“Acervo enviado”</strong> chegaram
+                por outra via e ainda estão com a autoria em levantamento. Se você
+                fotografou alguma delas, ou sabe quem fotografou, fale com a gente
+                pelas redes do clube para creditarmos corretamente.
               </p>
               <p>
                 As peças em SVG são composições gráficas criadas para este projeto.

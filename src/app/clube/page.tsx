@@ -8,7 +8,7 @@ import Magnetic from "@/components/ui/Magnetic";
 import Crest from "@/components/ui/Crest";
 import { club, pilares } from "@/data/club";
 import { idolos, classicos } from "@/data/moments";
-import { fotos } from "@/data/photos";
+import { fotos, acervoEnviado } from "@/data/photos";
 
 export const metadata: Metadata = {
   title: "O Clube",
@@ -54,7 +54,7 @@ export default function ClubePage() {
                   src={
                     [
                       fotos.fachadaAngulo,
-                      fotos.elenco2011,
+                      acervoEnviado.camisaRetro,
                       fotos.camposCentro,
                       fotos.aryzaoNoite,
                     ][i].src
@@ -62,7 +62,7 @@ export default function ClubePage() {
                   alt={
                     [
                       fotos.fachadaAngulo,
-                      fotos.elenco2011,
+                      acervoEnviado.camisaRetro,
                       fotos.camposCentro,
                       fotos.aryzaoNoite,
                     ][i].alt
