@@ -80,9 +80,13 @@ export default function Hero() {
           Empilhado uniformemente ele apagava a fotografia: o título fica à
           esquerda, então é lá que o azul pesa; à direita o Aryzão aparece.
         */}
-        <div className="absolute inset-0 bg-anil-800/45" />
-        <div className="absolute inset-0 bg-gradient-to-b from-anil-950/55 via-anil-950/10 to-anil-950" />
-        <div className="absolute inset-0 bg-gradient-to-r from-anil-950/55 via-anil-950/10 to-anil-950/0" />
+        {/*
+          Um véu só, e leve. O filtro acima já garante o contraste: sobre a
+          parte mais clara do gramado, o texto branco fica em 6,4:1. Este
+          gradiente existe para dois trabalhos pontuais — escurecer o topo, onde
+          fica o menu, e fundir a base da imagem com o azul da página.
+        */}
+        <div className="absolute inset-0 bg-gradient-to-b from-anil-950/45 via-transparent to-anil-950" />
       </motion.div>
 
       <motion.div
