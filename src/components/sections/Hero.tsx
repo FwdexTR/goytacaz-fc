@@ -67,11 +67,14 @@ export default function Hero() {
           sizes="100vw"
           className={`object-cover ${ok ? "animate-[respiro_28s_ease-in-out_infinite_alternate]" : ""}`}
         />
-        {/* Véu duplo: o texto precisa de contraste sobre a fotografia clara do
-            gramado iluminado, e o azul profundo devolve a imagem à paleta. */}
-        <div className="absolute inset-0 bg-anil-950/45" />
-        <div className="absolute inset-0 bg-gradient-to-b from-anil-950/85 via-anil-950/55 to-anil-950" />
-        <div className="absolute inset-0 bg-gradient-to-r from-anil-950/80 via-anil-950/20 to-transparent" />
+        {/*
+          O véu escurece onde o texto pousa e abre onde não pousa.
+          Empilhado uniformemente ele apagava a fotografia: o título fica à
+          esquerda, então é lá que o azul pesa; à direita o Aryzão aparece.
+        */}
+        <div className="absolute inset-0 bg-anil-950/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-anil-950/60 via-anil-950/20 to-anil-950" />
+        <div className="absolute inset-0 bg-gradient-to-r from-anil-950/70 via-anil-950/25 to-anil-950/0" />
       </motion.div>
 
       <motion.div
