@@ -65,6 +65,14 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
+          /*
+           * O gramado sob os refletores é verde-limão: em cima dele, texto
+           * branco some. Em vez de cobrir a foto com preto — o que apagava o
+           * estádio inteiro —, a imagem é tratada como chapa editorial:
+           * dessaturada e escurecida, ela entra na paleta azul do site e o
+           * título ganha contraste sem esconder a arquibancada.
+           */
+          style={{ filter: "saturate(0.38) brightness(0.46) contrast(1.08)" }}
           className={`object-cover ${ok ? "animate-[respiro_28s_ease-in-out_infinite_alternate]" : ""}`}
         />
         {/*
@@ -72,9 +80,9 @@ export default function Hero() {
           Empilhado uniformemente ele apagava a fotografia: o título fica à
           esquerda, então é lá que o azul pesa; à direita o Aryzão aparece.
         */}
-        <div className="absolute inset-0 bg-anil-950/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-anil-950/60 via-anil-950/20 to-anil-950" />
-        <div className="absolute inset-0 bg-gradient-to-r from-anil-950/70 via-anil-950/25 to-anil-950/0" />
+        <div className="absolute inset-0 bg-anil-800/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-anil-950/55 via-anil-950/10 to-anil-950" />
+        <div className="absolute inset-0 bg-gradient-to-r from-anil-950/55 via-anil-950/10 to-anil-950/0" />
       </motion.div>
 
       <motion.div
