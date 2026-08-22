@@ -15,7 +15,9 @@ export default function Label({
 }) {
   return (
     <p className={`t-mono flex items-center gap-4 text-anil-300 ${className}`}>
-      {indice ? <span className="tabular-nums opacity-70">{indice}</span> : null}
+      {/* opacity-80 e não menos: abaixo disso o número cai de 4,5:1 e reprova
+          o contraste mínimo, porque o texto é pequeno (11px). */}
+      {indice ? <span className="tabular-nums opacity-80">{indice}</span> : null}
       <span aria-hidden="true" className="h-px w-10 bg-current opacity-40" />
       <span>{children}</span>
     </p>

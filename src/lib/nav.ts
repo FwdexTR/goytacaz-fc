@@ -11,4 +11,29 @@ export const rotas: Rota[] = [
   { href: "/contato", nome: "Contato", indice: "08" },
 ];
 
-export const SITE_URL = "https://goytacazfc.com.br";
+/**
+ * Endereço público do site.
+ *
+ * É daqui que saem as URLs canônicas, o sitemap e — o que mais importa na
+ * prática — o endereço absoluto da imagem de preview. Um domínio fixo que ainda
+ * não existe faria o WhatsApp e o Twitter buscarem a prévia num lugar vazio, e
+ * o link seria compartilhado sem imagem nenhuma.
+ *
+ * Ordem: variável explícita → domínio de produção da Vercel → deploy atual →
+ * desenvolvimento. Para apontar a um domínio próprio, basta definir
+ * NEXT_PUBLIC_SITE_URL; nada mais no código precisa mudar.
+ */
+function resolverSiteUrl(): string {
+  const explicito = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicito) return explicito.replace(/\/$/, "");
+
+  const producao = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (producao) return `https://${producao}`;
+
+  const deploy = process.env.VERCEL_URL;
+  if (deploy) return `https://${deploy}`;
+
+  return "http://localhost:3210";
+}
+
+export const SITE_URL = resolverSiteUrl();
