@@ -44,6 +44,14 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+
+  /*
+   * `clip` e não `hidden`: os dois impedem a rolagem lateral, mas `hidden`
+   * transforma o elemento em contêiner de rolagem e quebra o `position: sticky`
+   * dos filhos — que é o que segura o ano fixo da linha do tempo e o cabeçalho.
+   * `clip` apenas recorta.
+   */
+  overflow-x: clip;
 }
 
 body {
@@ -53,7 +61,8 @@ body {
   font-synthesis-weight: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  /* O recorte lateral vive no html (ver acima); aqui atrapalharia o sticky. */
+  overflow-x: clip;
 }
 
 /* Lenis */

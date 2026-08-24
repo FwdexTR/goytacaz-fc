@@ -22,7 +22,13 @@ export default function HistoriaTeaser() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-62%"]);
 
   const Cartao = ({ c, i }: { c: (typeof cartoes)[number]; i: number }) => (
-    <article className="w-[78vw] shrink-0 sm:w-[46vw] lg:w-[30vw]">
+    /*
+     * O cartão É o item do flex — não existe invólucro entre ele e o trilho.
+     * Um `<div className="snap-start">` no meio virava o item flexível, e como
+     * ele não tinha `shrink-0` encolhia para 23px: os cartões transbordavam e
+     * se empilhavam uns sobre os outros no celular.
+     */
+    <article className="w-[78vw] shrink-0 snap-start sm:w-[46vw] lg:w-[30vw]">
       <div className="relative aspect-[4/5] overflow-hidden bg-anil-900 grain">
         <Image
           src={c.imagem!.src}
@@ -70,9 +76,7 @@ export default function HistoriaTeaser() {
       {!ok ? (
         <div className="mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-8 md:px-10">
           {cartoes.map((c, i) => (
-            <div key={c.id} className="snap-start">
-              <Cartao c={c} i={i} />
-            </div>
+            <Cartao key={c.id} c={c} i={i} />
           ))}
         </div>
       ) : (
@@ -91,9 +95,7 @@ export default function HistoriaTeaser() {
           {/* Mobile/tablet: arraste nativo com snap. */}
           <div className="mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-8 md:px-10 lg:hidden">
             {cartoes.map((c, i) => (
-              <div key={c.id} className="snap-start">
-                <Cartao c={c} i={i} />
-              </div>
+              <Cartao key={c.id} c={c} i={i} />
             ))}
           </div>
         </>
