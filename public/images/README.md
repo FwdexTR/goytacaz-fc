@@ -6,13 +6,12 @@ das legendas.
 ```
 /images
   /brand     escudo oficial do clube (domínio público)
-  /photos    FOTOGRAFIAS REAIS — Wikimedia Commons, licença livre
-  /history   composições gráficas: capítulos da linha do tempo
-  /stadium   composições gráficas do estádio
-  /team      composições gráficas de elenco
-  /fans      composições gráficas de torcida
-  /gallery   composições gráficas de abertura
+  /photos    fotografias do Wikimedia Commons, licença livre
+  /acervo    fotografias entregues pelo clube/torcedor, autoria a confirmar
 ```
+
+O site é **inteiramente fotográfico**. As composições gráficas que ocupavam o
+lugar do acervo foram removidas quando as fotos chegaram.
 
 ## 1. Fotografias reais — `/photos`
 
@@ -77,23 +76,15 @@ Limitação técnica: o Word recomprimiu as imagens na inserção, então nenhum
 passa de ~600 px de largura. Servem bem como cartão de galeria e bloco médio,
 mas não como imagem de tela cheia. Os originais, se existirem, valem a pena.
 
-## 3. Composições gráficas — os arquivos `.svg`
-
-Chapas duotônicas geradas para este projeto (`scripts/`), cobrindo as décadas sem
-registro fotográfico de licença livre. São claramente identificadas como
-composições na galeria.
-
-### Substituindo por material do clube
+## 3. Substituindo uma imagem
 
 1. Exporte em **WebP** (ou AVIF), respeitando a proporção do arquivo atual.
-2. Salve em `/photos` com nome descritivo.
+2. Salve em `/photos` (licença livre) ou `/acervo` (material do clube).
 3. Aponte o `src` no arquivo de dados correspondente (`src/data/history.ts`,
-   `gallery.ts`, `stadium.ts`) e acrescente `creditos`.
+   `gallery.ts`, `stadium.ts`, `photos.ts`) e acrescente o crédito.
 
 `next/image` cuida de `srcset`, dimensionamento responsivo e lazy loading.
-
-Mantenha cada arquivo abaixo de ~600 KB. Para originais de alta resolução,
-publique aqui a versão otimizada e guarde o original fora do repositório.
+Mantenha cada arquivo abaixo de ~600 KB.
 
 ## 4. Escudo — `/brand/escudo.webp`
 
