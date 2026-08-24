@@ -147,9 +147,12 @@ export default function Header() {
           <motion.div
             id="menu-mobile"
             className="fixed inset-0 z-40 flex flex-col justify-center bg-anil-950 px-6 pt-[var(--header-h)] lg:hidden grain"
-            initial={ok ? { clipPath: "inset(0 0 100% 0)" } : { opacity: 0 }}
-            animate={ok ? { clipPath: "inset(0 0 0% 0)" } : { opacity: 1 }}
-            exit={ok ? { clipPath: "inset(0 0 100% 0)" } : { opacity: 0 }}
+            /* Opacidade e deslocamento, não recorte: se a animação falhar, o
+               menu ainda aparece. Com clip-path, falhar significa menu invisível
+               e navegação inacessível no celular. */
+            initial={ok ? { opacity: 0, y: -12 } : { opacity: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={ok ? { opacity: 0, y: -12 } : { opacity: 0 }}
             transition={{ duration: 0.6, ease: EASE }}
           >
             <nav aria-label="Navegação principal (mobile)">

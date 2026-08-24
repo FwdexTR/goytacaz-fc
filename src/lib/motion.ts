@@ -20,13 +20,17 @@ export const fade: Variants = {
   }),
 };
 
-/** Revelação por máscara — a imagem "sobe" de dentro do enquadramento. */
-export const unmask: Variants = {
-  hidden: { clipPath: "inset(0 0 100% 0)" },
-  show: {
-    clipPath: "inset(0 0 0% 0)",
-    transition: { duration: 1.25, ease: EASE },
-  },
+/**
+ * Aproximação que assenta — substitui a antiga revelação por máscara.
+ *
+ * A máscara partia de `clip-path: inset(0 0 100% 0)`: quando a interpolação do
+ * recorte não acontecia, o elemento ficava invisível para sempre. Aqui o estado
+ * inicial já é visível, então falhar custa no máximo um enquadramento levemente
+ * mais fechado.
+ */
+export const aproxima: Variants = {
+  hidden: { scale: 1.06 },
+  show: { scale: 1, transition: { duration: 1.25, ease: EASE } },
 };
 
 export const stagger: Variants = {
