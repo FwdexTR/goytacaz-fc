@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import Label from "@/components/ui/Label";
 import TextReveal from "@/components/ui/TextReveal";
@@ -8,17 +9,47 @@ type Props = {
   secao: string;
   titulo: string;
   intro?: string;
+  /**
+   * Fotografia de abertura. Quando existe, a página começa com imagem em vez
+   * de uma tela cheia de tipografia — o visitante vê o clube antes de ler.
+   */
+  fundo?: { src: string; alt: string; legenda?: string };
   children?: ReactNode;
 };
 
 /** Abertura padrão das páginas internas — mesma cadência em todo o site. */
-export default function PageHero({ indice, secao, titulo, intro, children }: Props) {
+export default function PageHero({
+  indice,
+  secao,
+  titulo,
+  intro,
+  fundo,
+  children,
+}: Props) {
   return (
-    <header className="relative overflow-hidden border-b border-white/10 pb-16 pt-[calc(var(--header-h)+5rem)] md:pb-24 md:pt-[calc(var(--header-h)+8rem)] grain">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(60%_60%_at_20%_0%,var(--color-anil-800)_0%,transparent_70%)] opacity-70"
-      />
+    <header className="relative overflow-hidden border-b border-white/10 pb-12 pt-[calc(var(--header-h)+3rem)] md:pb-24 md:pt-[calc(var(--header-h)+8rem)] grain">
+      {fundo ? (
+        <div aria-hidden="true" className="absolute inset-0 -z-10">
+          <Image
+            src={fundo.src}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            /* Mesmo tratamento do hero da Home: a foto entra na paleta azul e
+               o título continua legível por cima dela. */
+            style={{ filter: "saturate(0.38) brightness(0.42) contrast(1.08)" }}
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-anil-950/55 via-anil-950/20 to-anil-950" />
+        </div>
+      ) : (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(60%_60%_at_20%_0%,var(--color-anil-800)_0%,transparent_70%)] opacity-70"
+        />
+      )}
+
       <div className="mx-auto max-w-[110rem] px-5 md:px-10">
         <Label indice={indice}>{secao}</Label>
         <TextReveal as="h1" className="font-display t-hero mt-6 max-w-[18ch]" text={titulo} />
@@ -28,6 +59,10 @@ export default function PageHero({ indice, secao, titulo, intro, children }: Pro
           </Reveal>
         ) : null}
         {children}
+
+        {fundo?.legenda ? (
+          <p className="t-mono mt-10 text-fumaca">{fundo.legenda}</p>
+        ) : null}
       </div>
     </header>
   );

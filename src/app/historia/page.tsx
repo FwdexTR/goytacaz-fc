@@ -5,6 +5,7 @@ import Marquee from "@/components/ui/Marquee";
 import Magnetic from "@/components/ui/Magnetic";
 import Reveal from "@/components/ui/Reveal";
 import { eras } from "@/data/history";
+import { fotos } from "@/data/photos";
 
 export const metadata: Metadata = {
   title: "História",
@@ -21,8 +22,15 @@ export default function HistoriaPage() {
         secao="História"
         titulo="Uma história que atravessa gerações"
         intro="Há histórias que começam num campo. Esta começou numa recusa, num pedido de barco negado às margens do Paraíba do Sul. O que veio depois foram mais de cem anos de futebol azul e branco em Campos dos Goytacazes."
+        fundo={{
+          src: fotos.aryzaoNoite.src,
+          alt: fotos.aryzaoNoite.alt,
+          legenda: "O Aryzão lotado — foto de Leonardo Berenger (CC BY-SA 4.0)",
+        }}
       >
-        <Reveal index={3} className="mt-12">
+        {/* No celular a barra fixa do ano já diz em que era você está; esta
+            lista só empurraria as fotografias para baixo da dobra. */}
+        <Reveal index={3} className="mt-12 hidden md:block">
           <p className="t-mono text-fumaca">Eras percorridas</p>
           <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
             {eras.map((e) => (

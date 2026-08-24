@@ -145,7 +145,21 @@ export default function Timeline() {
                         {c.titulo}
                       </h2>
 
-                      <p className="lede mt-6 max-w-2xl">{c.resumo}</p>
+                      {/* A fotografia vem antes do texto: o capítulo abre pela
+                          imagem, e não depois de dois parágrafos de leitura. */}
+                      {c.imagem ? (
+                        <Plate
+                          className="mt-8"
+                          src={c.imagem.src}
+                          alt={c.imagem.alt}
+                          legenda={c.imagem.legenda}
+                          ratio="16 / 10"
+                          parallax={40}
+                          sizes="(max-width: 1024px) 100vw, 60vw"
+                        />
+                      ) : null}
+
+                      <p className="lede mt-8 max-w-2xl">{c.resumo}</p>
 
                       {c.destaques?.length ? (
                         <dl className="mt-8 flex flex-wrap gap-x-12 gap-y-5">
@@ -158,18 +172,6 @@ export default function Timeline() {
                             </div>
                           ))}
                         </dl>
-                      ) : null}
-
-                      {c.imagem ? (
-                        <Plate
-                          className="mt-10"
-                          src={c.imagem.src}
-                          alt={c.imagem.alt}
-                          legenda={c.imagem.legenda}
-                          ratio="16 / 10"
-                          parallax={40}
-                          sizes="(max-width: 1024px) 100vw, 60vw"
-                        />
                       ) : null}
 
                       {c.detalhe ? (
