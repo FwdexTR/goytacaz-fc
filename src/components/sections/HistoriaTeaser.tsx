@@ -29,6 +29,9 @@ export default function HistoriaTeaser() {
           alt={c.imagem!.alt}
           fill
           sizes="(max-width: 640px) 78vw, (max-width: 1024px) 46vw, 30vw"
+          // Mesmo motivo da Chapa: cartão dentro de trilho transformado é
+          // terreno onde o carregamento preguiçoso falha e a moldura fica vazia.
+          loading="eager"
           className="object-cover"
         />
         <p className="font-display absolute bottom-4 left-5 z-20 text-[clamp(2.5rem,4vw,4rem)] leading-none mix-blend-difference">

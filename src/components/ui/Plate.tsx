@@ -64,7 +64,18 @@ export default function Plate({
             fill
             sizes={sizes}
             priority={priority}
-            loading={priority ? undefined : "lazy"}
+            /*
+             * Carregamento imediato, não preguiçoso.
+             *
+             * Estas são as fotografias que contam a história — não são enfeite
+             * que pode chegar atrasado. Com `lazy`, a foto depende de uma
+             * heurística do navegador que falha em situações comuns (aba aberta
+             * em segundo plano, rolagem rápida, aba restaurada): a moldura
+             * aparece vazia e a legenda fica órfã. O acervo inteiro do site pesa
+             * pouco, então garantir que a imagem chegue vale mais do que
+             * economizar requisições.
+             */
+            loading={priority ? undefined : "eager"}
             className="object-cover"
           />
         </motion.div>
