@@ -39,7 +39,7 @@ export default function MotionToggle({ className = "" }: { className?: string })
                 aria-checked={ativo}
                 title={o.descricao}
                 onClick={() => definir(o.valor)}
-                className={`t-mono px-4 py-2.5 transition-colors ${
+                className={`t-mono min-h-11 px-4 py-3 transition-colors ${
                   ativo
                     ? "bg-branco text-anil-950"
                     : "text-branco/70 hover:bg-anil-800/50 hover:text-branco"

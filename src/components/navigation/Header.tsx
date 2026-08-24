@@ -67,7 +67,7 @@ export default function Header() {
         <div className="mx-auto flex h-[var(--header-h)] max-w-[110rem] items-center justify-between px-5 md:px-10">
           <Link
             href="/"
-            className="group flex items-center gap-3"
+            className="group -my-2 flex min-h-11 items-center gap-3 py-2"
             aria-label="Goytacaz Futebol Clube — início"
           >
             <Crest size={30} decorativo className="transition-transform duration-500 group-hover:-rotate-6" />
@@ -180,6 +180,23 @@ export default function Header() {
                 ))}
               </ul>
             </nav>
+
+            {/* No celular não há espaço para o atalho na barra do topo, então
+                ele mora aqui — onde a pessoa já parou para escolher. */}
+            {sistemaReduzido && preferencia === "auto" ? (
+              <button
+                type="button"
+                onClick={() => definir("on")}
+                className="t-mono mt-8 inline-flex min-h-11 items-center border border-anil-400/60 px-5 py-3 text-anil-300 transition-colors hover:bg-anil-800/50 hover:text-branco"
+              >
+                Ativar animações
+                <span className="sr-only">
+                  {" "}
+                  — seu sistema pede movimento reduzido; isto liga as animações só
+                  neste site
+                </span>
+              </button>
+            ) : null}
 
             <p className="t-mono mt-10 text-fumaca">
               Campos dos Goytacazes — RJ · desde 1912

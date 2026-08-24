@@ -19,8 +19,8 @@ export const momentos: Momento[] = [
     texto:
       "Cinco dias após a fundação, o Goytacaz venceu o Internacional por 2 a 1. A primeira página de tudo.",
     imagem: {
-      src: "/images/history/1912-primeiro-jogo.svg",
-      alt: "Composição gráfica do primeiro jogo do Goytacaz, em 1912",
+      src: "/images/photos/campos-santo-antonio.webp",
+      alt: "Fachada da Capela de Santo Antônio, em Guarus, Campos dos Goytacazes",
     },
   },
   {
@@ -30,8 +30,8 @@ export const momentos: Momento[] = [
     texto:
       "5 de junho de 1930: o campo ganha iluminação elétrica e o interior fluminense descobre o futebol noturno.",
     imagem: {
-      src: "/images/history/1930-iluminacao.svg",
-      alt: "Composição gráfica da iluminação elétrica no campo da Rua do Gás",
+      src: "/images/photos/campos-lapa.webp",
+      alt: "Igreja de Nossa Senhora da Lapa, em Campos dos Goytacazes",
     },
   },
   {
@@ -41,8 +41,8 @@ export const momentos: Momento[] = [
     texto:
       "O clube deixa de jogar emprestado e passa a ter casa própria na Rua dos Goytacazes.",
     imagem: {
-      src: "/images/stadium/aryzao-1938.svg",
-      alt: "Composição gráfica da inauguração do Aryzão",
+      src: "/images/photos/aryzao-04.webp",
+      alt: "Fachada azul e branca da sede do Goytacaz, com as letras GOYTACAZ F.C. em relevo",
     },
   },
   {
@@ -52,8 +52,8 @@ export const momentos: Momento[] = [
     texto:
       "Supercampeonato conquistado invicto — o auge de uma década de domínio no futebol da região.",
     imagem: {
-      src: "/images/history/1955-invicto.svg",
-      alt: "Composição gráfica da campanha invicta de 1955",
+      src: "/images/acervo/comemoracao-gol.webp",
+      alt: "Jogadores do Goytacaz se abraçam para comemorar diante da arquibancada lotada",
     },
   },
   {
@@ -63,8 +63,8 @@ export const momentos: Momento[] = [
     texto:
       "Primeiro clube do antigo Estado do Rio a pisar no gramado do Maracanã. Empate em 2 a 2 com o Madureira.",
     imagem: {
-      src: "/images/history/1963-maracana.svg",
-      alt: "Composição gráfica da estreia no Maracanã",
+      src: "/images/photos/maracana.webp",
+      alt: "Fachada do Estádio do Maracanã, no Rio de Janeiro",
     },
   },
   {
@@ -74,8 +74,8 @@ export const momentos: Momento[] = [
     texto:
       "O maior público da história do Aryzão, em Goytacaz × Flamengo, no ano do título fluminense.",
     imagem: {
-      src: "/images/fans/1978-recorde.svg",
-      alt: "Composição gráfica do recorde de público do Aryzão",
+      src: "/images/acervo/torcida-fumaca-01.webp",
+      alt: "Arquibancada do Aryzão tomada por fumaça azul e serpentinas",
     },
   },
 ];

@@ -70,7 +70,7 @@ export default function GaleriaPage() {
                       href={c.fonte}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="t-mono text-anil-300 underline-offset-4 transition-colors hover:text-branco hover:underline"
+                      className="t-mono -my-2 inline-flex min-h-11 items-center py-3 text-anil-300 underline-offset-4 transition-colors hover:text-branco hover:underline"
                     >
                       Ver no Commons ↗
                     </a>

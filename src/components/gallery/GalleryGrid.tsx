@@ -70,7 +70,7 @@ export default function GalleryGrid() {
                   type="button"
                   onClick={() => setFiltro(c)}
                   aria-pressed={ativo}
-                  className={`t-mono border px-4 py-2.5 transition-colors ${
+                  className={`t-mono min-h-11 border px-4 py-3 transition-colors ${
                     ativo
                       ? "border-branco bg-branco text-anil-950"
                       : "border-white/20 text-branco/70 hover:border-anil-300 hover:text-branco"
@@ -146,7 +146,7 @@ export default function GalleryGrid() {
                 ref={fechar}
                 type="button"
                 onClick={() => setAbertoEm(null)}
-                className="t-mono px-3 py-2 text-branco/80 transition-colors hover:text-branco"
+                className="t-mono -mr-3 min-h-11 px-3 py-3 text-branco/80 transition-colors hover:text-branco"
               >
                 Fechar ✕
               </button>
@@ -160,14 +160,27 @@ export default function GalleryGrid() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: ok ? 0.4 : 0, ease: EASE }}
               >
-                <div className="relative max-h-[70svh] w-full flex-1 grain">
+                {/*
+                  A imagem precisa de `loading="eager"` e de limites nos dois
+                  eixos. Sem isso ela entrava no lightbox com caixa de altura
+                  zero, o carregamento preguiçoso nunca era disparado e a foto
+                  simplesmente não aparecia — só a legenda.
+                */}
+                {/*
+                  Altura fixa no contêiner e `fill` na imagem.
+                  Com `flex-1` o palco chegava a colapsar para 82px: o
+                  carregamento preguiçoso não disparava e a foto não aparecia —
+                  só a legenda. Com altura declarada, `object-contain` acomoda
+                  retrato e paisagem sem cortar nada.
+                */}
+                <div className="relative h-[62svh] w-full grain">
                   <Image
                     src={foto.src}
                     alt={foto.alt}
-                    width={1600}
-                    height={1200}
+                    fill
+                    loading="eager"
                     sizes="(max-width: 1024px) 100vw, 70vw"
-                    className="mx-auto max-h-[70svh] w-auto object-contain"
+                    className="object-contain"
                   />
                 </div>
                 <figcaption className="mt-5">

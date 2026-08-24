@@ -79,7 +79,7 @@ export default async function NoticiasPage() {
                           href={n.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-anil-300 underline-offset-4 transition-colors hover:text-branco hover:underline"
+                          className="-my-2 inline-flex min-h-11 items-center py-2 text-anil-300 underline-offset-4 transition-colors hover:text-branco hover:underline"
                         >
                           Ler a matéria ↗
                         </a>

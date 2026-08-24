@@ -6,11 +6,10 @@
  * - /images/photos/*.webp são FOTOGRAFIAS REAIS do Goytacaz, vindas do Wikimedia
  *   Commons em domínio público ou Creative Commons. Todas trazem `creditos`, e a
  *   licença CC BY-SA exige que essa atribuição continue visível.
- * - Os arquivos .svg são COMPOSIÇÕES GRÁFICAS geradas para este projeto. Ocupam
- *   o lugar do acervo histórico nas décadas sem registro fotográfico livre.
+ * - /images/acervo/*.webp são fotografias entregues pelo torcedor/clube, com
+ *   autoria ainda em levantamento — o crédito pendente aparece na interface.
  *
- * Ao receber o acervo oficial do clube, substitua os .svg mantendo a proporção.
- * Formato recomendado: .webp (ou .avif).
+ * O acervo é inteiramente fotográfico: não há mais composição gráfica em uso.
  */
 
 export const categorias = [
@@ -327,126 +326,5 @@ export const fotos: Foto[] = [
     categoria: "Jogadores",
     formato: "retrato",
     creditos: "Wellington Orlando Pereira Ramos · CC BY-SA 4.0",
-  },
-  {
-    id: "g1",
-    src: "/images/history/1912-fundacao.svg",
-    alt: "Composição gráfica evocando a fundação do clube em 1912",
-    legenda: "A fundação",
-    ano: "1912",
-    categoria: "História",
-    formato: "retrato",
-  },
-  {
-    id: "g2",
-    src: "/images/stadium/aryzao-1938.svg",
-    alt: "Composição gráfica da inauguração do Aryzão",
-    legenda: "Inauguração do Aryzão",
-    ano: "1938",
-    categoria: "Estádio",
-    formato: "panorama",
-  },
-  {
-    id: "g3",
-    src: "/images/fans/1978-recorde.svg",
-    alt: "Composição gráfica do recorde de público",
-    legenda: "14.996 no Aryzão",
-    ano: "1978",
-    categoria: "Torcida",
-    formato: "paisagem",
-  },
-  {
-    id: "g4",
-    src: "/images/history/1955-invicto.svg",
-    alt: "Composição gráfica da campanha invicta",
-    legenda: "O ano invicto",
-    ano: "1955",
-    categoria: "Momentos",
-    formato: "quadrado",
-  },
-  {
-    id: "g5",
-    src: "/images/team/elenco-classico.svg",
-    alt: "Composição gráfica de elenco histórico do Goytacaz",
-    legenda: "Elenco histórico",
-    categoria: "Jogadores",
-    formato: "paisagem",
-  },
-  {
-    id: "g6",
-    src: "/images/history/1963-maracana.svg",
-    alt: "Composição gráfica da estreia no Maracanã",
-    legenda: "Estreia no Maracanã",
-    ano: "1963",
-    categoria: "Jogos",
-    formato: "retrato",
-  },
-  {
-    id: "g7",
-    src: "/images/stadium/aryzao-arquibancada.svg",
-    alt: "Composição gráfica das arquibancadas do Aryzão",
-    legenda: "Arquibancada",
-    categoria: "Estádio",
-    formato: "quadrado",
-  },
-  {
-    id: "g8",
-    src: "/images/fans/torcida-azul.svg",
-    alt: "Composição gráfica da torcida alvi-anil",
-    legenda: "O azul do povo",
-    categoria: "Torcida",
-    formato: "paisagem",
-  },
-  {
-    id: "g9",
-    src: "/images/history/1930-iluminacao.svg",
-    alt: "Composição gráfica da chegada da iluminação elétrica",
-    legenda: "A luz da Rua do Gás",
-    ano: "1930",
-    categoria: "História",
-    formato: "retrato",
-  },
-  {
-    id: "g10",
-    src: "/images/stadium/aryzao-noite.svg",
-    alt: "Composição gráfica do estádio à noite",
-    legenda: "Aryzão à noite",
-    categoria: "Estádio",
-    formato: "panorama",
-  },
-  {
-    id: "g11",
-    src: "/images/team/camisa.svg",
-    alt: "Composição gráfica da camisa azul e branca",
-    legenda: "Azul e branco",
-    categoria: "Jogadores",
-    formato: "quadrado",
-  },
-  {
-    id: "g12",
-    src: "/images/history/1977-brasileirao.svg",
-    alt: "Composição gráfica da campanha no Campeonato Brasileiro",
-    legenda: "Campos contra o Brasil",
-    ano: "1977",
-    categoria: "Jogos",
-    formato: "paisagem",
-  },
-  {
-    id: "g13",
-    src: "/images/history/1940-tetra.svg",
-    alt: "Composição gráfica do tetracampeonato campista",
-    legenda: "Tetracampeão",
-    ano: "1940",
-    categoria: "Momentos",
-    formato: "retrato",
-  },
-  {
-    id: "g14",
-    src: "/images/history/2017-acesso.svg",
-    alt: "Composição gráfica do acesso de 2017",
-    legenda: "De volta à elite",
-    ano: "2017",
-    categoria: "Momentos",
-    formato: "quadrado",
   },
 ];

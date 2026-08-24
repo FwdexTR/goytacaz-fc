@@ -98,9 +98,9 @@ export default function AryzaoPage() {
 
             <div className="md:col-span-5 md:col-start-8">
               <Plate
-                src="/images/fans/1978-recorde.svg"
-                alt="Composição gráfica evocando o recorde de público do Aryzão"
-                legenda="1978 — Goytacaz × Flamengo"
+                src="/images/acervo/torcida-arquivo.webp"
+                alt="Torcedores do Goytacaz reunidos diante de um ônibus, com surdo e camisas do clube, em fotografia antiga"
+                legenda="Torcida do Goytacaz em fotografia de arquivo, sem data registrada"
                 ratio="4 / 5"
                 sizes="(max-width: 768px) 100vw, 40vw"
               />

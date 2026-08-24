@@ -72,7 +72,7 @@ export default function ContatoPage() {
                         href={r.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-display text-[clamp(1.15rem,2vw,1.6rem)] underline-offset-4 transition-colors hover:text-anil-300 hover:underline"
+                        className="font-display -my-2 inline-flex min-h-11 items-center py-2 text-[clamp(1.15rem,2vw,1.6rem)] underline-offset-4 transition-colors hover:text-anil-300 hover:underline"
                       >
                         Abrir perfil ↗
                       </a>

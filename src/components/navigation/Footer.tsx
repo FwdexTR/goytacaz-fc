@@ -25,7 +25,9 @@ export default function Footer() {
                 <li key={r.href}>
                   <Link
                     href={r.href}
-                    className="text-branco/70 transition-colors hover:text-branco"
+                    // Bloco com respiro vertical: no toque, um link de texto
+                    // puro fica com ~20px de altura e é difícil de acertar.
+                    className="-my-1 inline-block py-2 text-branco/70 transition-colors hover:text-branco"
                   >
                     {r.nome}
                   </Link>
@@ -50,7 +52,7 @@ export default function Footer() {
                     href={r.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-branco/70 underline-offset-4 transition-colors hover:text-branco hover:underline"
+                    className="-my-1 inline-block py-2 text-branco/70 underline-offset-4 transition-colors hover:text-branco hover:underline"
                   >
                     {r.nome}
                   </a>

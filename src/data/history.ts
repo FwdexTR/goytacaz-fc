@@ -34,9 +34,10 @@ export const capitulos: Capitulo[] = [
     detalhe:
       "A primeira diretoria teve Luiz Carlos Cabral na presidência, Roberto Melo como vice e Otto Nogueira como primeiro tesoureiro. A sede provisória funcionou na casa de Otto Nogueira, na Rua 21 de Abril, nº 14. O nome escolhido homenageia os goytacazes, povo indígena que ocupava a região muito antes da fundação da cidade.",
     imagem: {
-      src: "/images/history/1912-fundacao.svg",
-      alt: "Composição gráfica evocando a fundação do Goytacaz em 1912",
-      legenda: "20 de agosto de 1912 — Campos dos Goytacazes",
+      src: "/images/acervo/torcida-arquivo.webp",
+      alt:
+        "Torcedores do Goytacaz reunidos diante de um ônibus, com surdo e camisas do clube, em fotografia antiga",
+      legenda: "Torcida do Goytacaz em fotografia de arquivo, sem data registrada",
     },
     destaques: [
       { valor: "20 AGO", rotulo: "Data de fundação" },
@@ -71,9 +72,10 @@ export const capitulos: Capitulo[] = [
     resumo:
       "Dois anos após a fundação, o Goytacaz conquista o Campeonato Campista de 1914. É o primeiro campeão da história do futebol da cidade.",
     imagem: {
-      src: "/images/history/1914-primeiro-titulo.svg",
-      alt: "Composição gráfica do primeiro título campista",
-      legenda: "Campeonato Campista de 1914",
+      src: "/images/acervo/camisa-retro.webp",
+      alt:
+        "Camisa retrô azul e branca do Goytacaz com cordão na gola, ao lado de uma bola de couro antiga e da etiqueta Goytacaz desde 1912",
+      legenda: "Camisa retrô do clube, em homenagem ao uniforme dos primeiros anos",
     },
     destaques: [{ valor: "1º", rotulo: "Campeão da cidade" }],
   },
@@ -142,9 +144,10 @@ export const capitulos: Capitulo[] = [
     detalhe:
       "Os anos 1950 concentram a maior sequência vitoriosa da história do clube: títulos campistas em 1951, 1953, 1954, 1955, 1956, 1959 e 1960, além de uma sequência de Torneios Início entre 1952 e 1956.",
     imagem: {
-      src: "/images/history/1955-invicto.svg",
-      alt: "Composição gráfica da campanha invicta de 1955",
-      legenda: "1955 — campanha sem derrotas",
+      src: "/images/acervo/comemoracao-gol.webp",
+      alt:
+        "Jogadores do Goytacaz se abraçam para comemorar diante da arquibancada lotada",
+      legenda: "Comemoração diante da arquibancada — fotografia recente",
     },
     destaques: [{ valor: "0", rotulo: "Derrotas" }],
   },
@@ -175,9 +178,9 @@ export const capitulos: Capitulo[] = [
     detalhe:
       "Em 4 de dezembro de 1977, 12.923 pagantes viram Goytacaz e Palmeiras. Em 14 de dezembro, 11.489 acompanharam o jogo contra o Santos. A melhor campanha nacional viria em 1978: 30º lugar entre 74 participantes.",
     imagem: {
-      src: "/images/history/1977-brasileirao.svg",
-      alt: "Composição gráfica da participação no Campeonato Brasileiro",
-      legenda: "1977 — o Goytacaz na elite nacional",
+      src: "/images/acervo/torcida-alambrado.webp",
+      alt: "Torcedores no alambrado, de braços erguidos, durante a partida",
+      legenda: "A torcida no alambrado do Aryzão — fotografia recente",
     },
     destaques: [
       { valor: "30º", rotulo: "Melhor posição nacional (1978)" },
@@ -192,9 +195,10 @@ export const capitulos: Capitulo[] = [
     resumo:
       "O maior público da história do Aryzão. Goytacaz e Flamengo, em 1978, diante de quase quinze mil pagantes. No mesmo ano, o clube conquista o Campeonato Fluminense.",
     imagem: {
-      src: "/images/fans/1978-recorde.svg",
-      alt: "Composição gráfica evocando o recorde de público do Aryzão",
-      legenda: "1978 — Goytacaz x Flamengo",
+      src: "/images/acervo/torcida-fumaca-01.webp",
+      alt:
+        "Arquibancada do Aryzão tomada por fumaça azul e serpentinas, com faixa de torcida organizada",
+      legenda: "A arquibancada do Aryzão em dia de jogo — fotografia recente",
     },
     destaques: [{ valor: "14.996", rotulo: "Pagantes — recorde do estádio" }],
     nota:
@@ -210,9 +214,9 @@ export const capitulos: Capitulo[] = [
     detalhe:
       "Foi também no gramado do Aryzão que Bebeto marcou seu primeiro gol como profissional, em 1983.",
     imagem: {
-      src: "/images/history/1985-taca-de-prata.svg",
-      alt: "Composição gráfica da campanha da Taça de Prata de 1985",
-      legenda: "1985 — vice-campeonato nacional da segunda divisão",
+      src: "/images/acervo/elenco-aplaude.webp",
+      alt: "Jogadores do Goytacaz aplaudem a torcida no fim da partida",
+      legenda: "Jogadores aplaudem a arquibancada — fotografia recente",
     },
   },
   {

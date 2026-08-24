@@ -182,7 +182,7 @@ export default function Hero() {
 
             <a
               href="#o-clube"
-              className="t-mono group flex items-center gap-3 text-anil-300 transition-colors hover:text-branco"
+              className="t-mono group -my-2 flex min-h-11 items-center gap-3 py-2 text-anil-300 transition-colors hover:text-branco"
             >
               Role para entrar
               <span

@@ -179,7 +179,7 @@ export default function Timeline() {
                             onClick={() => setExpandido(aberto ? null : c.id)}
                             aria-expanded={aberto}
                             aria-controls={`detalhe-${c.id}`}
-                            className="t-mono group inline-flex items-center gap-3 text-anil-300 transition-colors hover:text-branco"
+                            className="t-mono group -my-2 inline-flex min-h-11 items-center gap-3 py-2 text-anil-300 transition-colors hover:text-branco"
                           >
                             {aberto ? "Fechar" : "Ler mais"}
                             <span
